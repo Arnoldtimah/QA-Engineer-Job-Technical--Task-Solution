@@ -1,29 +1,21 @@
-    Part 2: Test Automation with Playwright
+
+    
+   # Part 2: Test Automation with Playwright
     Setup Instructions
-    
-      Install Node.js 
-      Download visual studio
       
-    Install Playwright:
-    Run the following commands to set up Playwright with TypeScript:
-    
-    bash
-      
-     Install Playwright:
+# Install Playwright:
     Run the following commands to set up Playwright with TypeScript:
      bash
 
-    npm init playwright
-    npm install
-
+     # npm init playwright
+     # npm install
    
-    command to run the automation test.
-    npx playwright test (to run the test)
+# command to run the automation test.
+    npx playwright test (to run test automation
+    npx playwright codegen (record the code)
 
-    How to Run Tests in Google Chrome
+# How to Run Tests in Google Chrome
     Install Playwright with the necessary browser dependencies:
-    bash
-
 
     npm install
     npx playwright install --with-deps
@@ -32,13 +24,11 @@
 
     npx playwright test 
         
-    Open the HTML report to view test results:
-
-    bash
+# Open the HTML report to view test results:
 
     npx playwright show-report
 
-    Project Structure:
+# Project Structure:
     Use the Page Object Model (POM) for maintainable and reusable code:
     stylus
 
