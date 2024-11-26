@@ -1,0 +1,36 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.locator('body').click();
+  await page.goto('https://playwright-lab.web.app/');
+  await page.getByLabel('First Name (mandatory):').click();
+  await page.getByLabel('First Name (mandatory):').press('CapsLock');
+  await page.getByLabel('First Name (mandatory):').fill('A');
+  await page.getByLabel('First Name (mandatory):').press('CapsLock');
+  await page.getByLabel('First Name (mandatory):').fill('Arnold');
+  await page.getByLabel('Last Name (mandatory):').click();
+  await page.getByLabel('Last Name (mandatory):').press('CapsLock');
+  await page.getByLabel('Last Name (mandatory):').fill('T');
+  await page.getByLabel('Last Name (mandatory):').press('CapsLock');
+  await page.getByLabel('Last Name (mandatory):').fill('Timah');
+  await page.getByPlaceholder('john.smith@example.com').click();
+  await page.getByPlaceholder('john.smith@example.com').fill('bofme55@gmail.com');
+  await page.getByLabel('Password (mandatory):', { exact: true }).click();
+  await page.getByLabel('Password (mandatory):', { exact: true }).press('CapsLock');
+  await page.getByLabel('Password (mandatory):', { exact: true }).fill('A');
+  await page.getByLabel('Password (mandatory):', { exact: true }).press('CapsLock');
+  await page.getByLabel('Password (mandatory):', { exact: true }).fill('Arnold25@');
+  await page.getByLabel('Confirm Password (mandatory):').click();
+  await page.getByLabel('Confirm Password (mandatory):').press('CapsLock');
+  await page.getByLabel('Confirm Password (mandatory):').fill('A');
+  await page.getByLabel('Confirm Password (mandatory):').press('CapsLock');
+  await page.getByLabel('Confirm Password (mandatory):').fill('Arnold25@');
+  await page.getByLabel('Male', { exact: true }).check();
+  await page.getByLabel('Date of Birth (optional):').fill('1996-01-11');
+  await page.getByPlaceholder('1234567890').click();
+  await page.getByPlaceholder('1234567890').fill('671738934');
+  await page.getByLabel('Address (optional):').click();
+  await page.getByLabel('Address (optional):').fill('molyko');
+  await page.getByLabel('LinkedIn URL (optional):').click();
+  await page.getByLabel('LinkedIn URL (optional):').fill('');
+});
